@@ -8,7 +8,7 @@ Browse jewellery, manage a cart, book an appointment, or manage the store throug
 
 <br />
 
-[**Open the live app →**](https://mech-mitra.vercel.app/)
+[**Open the live app →**](https://jevaraat-user.onrender.com)
 
 <br />
 
@@ -126,6 +126,6 @@ Both frontends use client-side routes. The root `render.yaml` includes a rewrite
 
 <div align="center">
 
-Made for jewellery shopping and store management · [Live app](https://mech-mitra.vercel.app/)
+Made for jewellery shopping and store management · [Live app](https://jevaraat-user.onrender.com)
 
 </div>
