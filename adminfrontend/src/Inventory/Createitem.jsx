@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 import InventoryMessage from "./InventoryMessage";
 import { useNavigate } from "react-router-dom";
 
@@ -53,7 +54,7 @@ function Createitem() {
     data.append("img_url", image);
 
     axios
-      .post(`https://jevaraat.onrender.com/create/${formData.category}`, data)
+      .post(`${API_BASE_URL}/create/${formData.category}`, data)
       .then((res) => {
         console.log(res.data);
         setMessageType("success");

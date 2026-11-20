@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { API_BASE_URL } from "../../App";
 
 function Signup() {
   const navigate = useNavigate();
@@ -80,9 +81,9 @@ function Signup() {
           password: formData.password,
         };
 
-        await axios.post("https://jevaraat.onrender.com/register", registerPayload);
+        await axios.post(`${API_BASE_URL}/register`, registerPayload);
 
-        const loginRes = await axios.post("https://jevaraat.onrender.com/login", {
+        const loginRes = await axios.post(`${API_BASE_URL}/login`, {
           email: formData.email,
           password: formData.password,
         });

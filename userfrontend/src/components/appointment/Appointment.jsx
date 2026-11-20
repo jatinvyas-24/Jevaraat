@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
-const API_BASE_URL = "https://jevaraat.onrender.com";
+import { API_BASE_URL } from "../../App";
 
 function Appointment() {
   const storedUser = localStorage.getItem("user");

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 
 import Section from "./Section";
 function Necklaces() {
@@ -8,7 +9,7 @@ function Necklaces() {
   
     useEffect(() => {
       axios
-        .get("https://jevaraat.onrender.com/read/necklace")
+        .get(`${API_BASE_URL}/read/necklace`)
         .then((res) => {
           setnecklace(res.data);
         })

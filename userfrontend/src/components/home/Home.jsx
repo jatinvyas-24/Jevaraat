@@ -7,6 +7,7 @@ import Review from "./Review";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { API_BASE_URL } from "../../App";
 
 function Home() {
   const location = useLocation();
@@ -17,7 +18,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/read/ring")
+      .get(`${API_BASE_URL}/read/ring`)
       .then((res) => {
         setRings(res.data);
       })
@@ -30,7 +31,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/read/ladiesring")
+      .get(`${API_BASE_URL}/read/ladiesring`)
       .then((res) => {
         setladRings(res.data);
       })
@@ -43,7 +44,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/read/necklace")
+      .get(`${API_BASE_URL}/read/necklace`)
       .then((res) => {
         setnecklace(res.data);
       })
@@ -56,7 +57,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/read/goldbar")
+      .get(`${API_BASE_URL}/read/goldbar`)
       .then((res) => {
         setgoldbar(res.data);
       })

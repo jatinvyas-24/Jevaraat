@@ -1,13 +1,14 @@
 import Internaldisplay from "./Internaldisplay";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../../App";
 
 function Allitemnecklace() {
   const [necklace, setnecklace] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/read/necklace")
+      .get(`${API_BASE_URL}/read/necklace`)
       .then((res) => {
         setnecklace(res.data);
       })

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../App";
 
 function Signin() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ function Signin() {
   };
 
   const loginUser = async () => {
-    const res = await axios.post("https://jevaraat.onrender.com/login", formData);
+    const res = await axios.post(`${API_BASE_URL}/login`, formData);
     console.log(res.data);
     localStorage.setItem("token", res.data.token);
     localStorage.setItem("user", JSON.stringify(res.data.user));

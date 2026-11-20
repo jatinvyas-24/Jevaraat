@@ -1,13 +1,14 @@
 import Goldbarsection from "./Goldbarsection";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 
 function Goldbar() {
 const [goldbar, setgoldbar] = useState([]);
   
   useEffect(() => {
       axios
-        .get("https://jevaraat.onrender.com/read/goldbar")
+        .get(`${API_BASE_URL}/read/goldbar`)
         .then((res) => {
           setgoldbar(res.data);
         })

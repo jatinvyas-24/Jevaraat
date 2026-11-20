@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 import Ordersdata from "./Ordersdata";
 
 function Orders() {
@@ -7,7 +8,7 @@ function Orders() {
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/orders")
+      .get(`${API_BASE_URL}/orders`)
       .then((res) => {
         setOrders(res.data);
       })

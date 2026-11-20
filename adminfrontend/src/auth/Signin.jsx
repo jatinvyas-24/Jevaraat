@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { getAdminToken, saveAdminSession } from "./storage";
+import { API_BASE_URL } from "../App";
 
 function Signin() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ function Signin() {
   };
 
   const loginAdmin = async () => {
-    const res = await axios.post("https://jevaraat.onrender.com/admin/login", formData);
+    const res = await axios.post(`${API_BASE_URL}/admin/login`, formData);
     const sessionData = {
       token: res.data.token,
       user: res.data.admin,

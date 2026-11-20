@@ -1,12 +1,13 @@
 import Appointmentdata from "./Appointmentdata";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 function Appointments() {
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/read/appointment")
+      .get(`${API_BASE_URL}/read/appointment`)
       .then((res) => {
         setAppointments(res.data);
       })

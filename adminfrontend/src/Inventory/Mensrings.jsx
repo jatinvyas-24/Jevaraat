@@ -2,13 +2,14 @@ import Section from "./Section";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 
 function Mensrings() {
   const [ring, setRings] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/read/ring")
+      .get(`${API_BASE_URL}/read/ring`)
       .then((res) => {
         setRings(res.data);
       })

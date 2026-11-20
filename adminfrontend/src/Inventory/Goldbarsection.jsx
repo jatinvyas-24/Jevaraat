@@ -3,6 +3,7 @@ import DeleteConfirmModal from "./DeleteConfirmModal";
 import InventoryMessage from "./InventoryMessage";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Goldbarsection({ item, heading }) {
@@ -55,7 +56,7 @@ function Goldbarsection({ item, heading }) {
 
     setIsDeleting(true);
     axios
-      .delete(`https://jevaraat.onrender.com/delete/${heading}/${selectedProduct._id}`)
+      .delete(`${API_BASE_URL}/delete/${heading}/${selectedProduct._id}`)
       .then((res) => {
         console.log(res.data);
         setItems((prev) =>
@@ -98,7 +99,7 @@ function Goldbarsection({ item, heading }) {
                 src={
                   item.img_url.startsWith("http")
                     ? item.img_url
-                    : `https://jevaraat.onrender.com/uploads/${item.img_url}`
+                    : `${API_BASE_URL}/uploads/${item.img_url}`
                 }
                 className="card-img-top"
                 alt="ring"

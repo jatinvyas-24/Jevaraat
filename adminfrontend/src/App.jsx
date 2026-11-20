@@ -19,6 +19,8 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import { getAdminToken } from "./auth/storage";
 import Profile from "./Profile/Profile";
 
+export const API_BASE_URL = "https://jevaraat.onrender.com";
+
 function App() {
   const location = useLocation();
   const isAuthenticated = Boolean(getAdminToken());

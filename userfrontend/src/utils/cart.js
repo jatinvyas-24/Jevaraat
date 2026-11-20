@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const API_BASE_URL = "https://jevaraat.onrender.com";
+import { API_BASE_URL } from "../App";
 
 const getAuthConfig = () => {
   const token = localStorage.getItem("token");

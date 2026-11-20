@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 import Search from "../Inventory/Search";
 import Customerdata from "./Customerdata";
 
@@ -8,7 +9,7 @@ function Customer() {
 
   useEffect(() => {
     axios
-      .get("https://jevaraat.onrender.com/users")
+      .get(`${API_BASE_URL}/users`)
       .then((res) => {
         setCustomers(res.data);
       })

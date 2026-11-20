@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../../App";
 
 import Internaldisplay from "./Internaldisplay";
 
@@ -8,7 +9,7 @@ function Allitems() {
   
     useEffect(() => {
       axios
-        .get("https://jevaraat.onrender.com/read/ring")
+        .get(`${API_BASE_URL}/read/ring`)
         .then((res) => {
           setRings(res.data);
         })

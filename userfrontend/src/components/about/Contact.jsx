@@ -18,7 +18,7 @@ function Contact() {
                 <h5 className="fw-semibold mb-1">Address</h5>
                 <p className="text-muted mb-0">
                   Jevaraat, Sarafa Bazar <br />
-                  Sagar, Madhya Pradesh - 470002
+                  Vidisha, Madhya Pradesh - 464001
                 </p>
               </div>
             </div>
@@ -33,21 +33,21 @@ function Contact() {
 
                 <p className="mb-1">
                   <a href="tel:9399683545" className="text-decoration-none text-dark">
-                    9399683545
+                    9691537392
                   </a>{" "}
                   <span className="text-muted">(Manager)</span>
                 </p>
 
                 <p className="mb-1">
-                  <a href="tel:7999905882" className="text-decoration-none text-dark">
-                    7999905882
+                  <a href="tel:9691537392" className="text-decoration-none text-dark">
+                    9691537392
                   </a>{" "}
                   <span className="text-muted">(Assistant Manager)</span>
                 </p>
 
                 <p>
-                  <a href="tel:8719001988" className="text-decoration-none text-dark">
-                    8719001988
+                  <a href="tel:9691537392" className="text-decoration-none text-dark">
+                    9691537392
                   </a>{" "}
                   <span className="text-muted">(Owner)</span>
                 </p>
@@ -62,10 +62,10 @@ function Contact() {
               <div>
                 <h5 className="fw-semibold mb-1">Email</h5>
                 <a
-                  href="mailto:dev71765@gmail.com"
+                  href="mailto:jatinvyas@gmail.com"
                   className="text-decoration-none text-dark"
                 >
-                  dev71765@gmail.com
+                  jatinvyas@gmail.com
                 </a>
               </div>
             </div>

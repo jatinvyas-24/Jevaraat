@@ -12,6 +12,9 @@ import Allitemswomenrings from "./components/home/Allitemswomenring";
 import Allitemnecklace from "./components/home/Allitemnecklace";
 import Profile from "./components/profile/Profile";
 import Cart from "./components/cart/Cart";
+
+export const API_BASE_URL = "https://jevaraat.onrender.com";
+
 function App() {
   return (
     <Routes>

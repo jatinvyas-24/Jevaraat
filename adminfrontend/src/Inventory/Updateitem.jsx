@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 import { useNavigate } from "react-router-dom";
 import InventoryMessage from "./InventoryMessage";
 
@@ -61,7 +62,7 @@ function Updateitem() {
     
 
     axios
-      .patch(`https://jevaraat.onrender.com/update/${data.category}/${data._id}`, form)
+      .patch(`${API_BASE_URL}/update/${data.category}/${data._id}`, form)
       .then((res) => {
         console.log(res.data);
         setMessageType("success");
@@ -207,7 +208,7 @@ function Updateitem() {
                     src={
                       data.img_url.startsWith("http")
                         ? data.img_url
-                        : `https://jevaraat.onrender.com/uploads/${data.img_url}`
+                        : `${API_BASE_URL}/uploads/${data.img_url}`
                     }
                     alt="current"
                     style={{

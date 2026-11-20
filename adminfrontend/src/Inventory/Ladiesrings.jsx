@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../App";
 
 import Section from "./Section";
 function Ladiesrings() {
@@ -7,7 +8,7 @@ function Ladiesrings() {
   
     useEffect(() => {
       axios
-        .get("https://jevaraat.onrender.com/read/ladiesring")
+        .get(`${API_BASE_URL}/read/ladiesring`)
         .then((res) => {
           setRings(res.data);
         })
