@@ -8,21 +8,21 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 2000;
 
-const allowedOrigins = process.env.CORS_ORIGINS
-  ?.split(",")
+const allowedOrigins = [
+  "https://jevaraat-user.onrender.com",
+  ...(process.env.CORS_ORIGINS || "").split(","),
+]
   .map((origin) => origin.trim())
   .filter(Boolean);
 
 const corsOptions = {
-  origin: allowedOrigins?.length
-    ? (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-          return callback(null, true);
-        }
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
 
-        return callback(new Error(`CORS blocked origin: ${origin}`));
-      }
-    : true,
+    return callback(new Error(`CORS blocked origin: ${origin}`));
+  },
   methods: ["GET", "HEAD", "POST", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
